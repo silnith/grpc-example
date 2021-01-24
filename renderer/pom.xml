@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.silnith.example.grpc</groupId>
+		<artifactId>grpc-example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>renderer</artifactId>
+	<name>Renderer</name>
+	<description>An example client that calls the tessellation service.</description>
+	<properties>
+		<maven.compiler.source>1.11</maven.compiler.source>
+		<maven.compiler.target>1.11</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.silnith.example.grpc</groupId>
+			<artifactId>tessellation-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+	   <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-toolchains-plugin</artifactId>
+               <configuration>
+                   <toolchains>
+                       <jdk>
+                           <version>[1.11,2.0)</version>
+                       </jdk>
+                   </toolchains>
+               </configuration>
+           </plugin>
+	   </plugins>
+	</build>
+</project>

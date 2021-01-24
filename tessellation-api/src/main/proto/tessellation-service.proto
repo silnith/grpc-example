@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package tessellation;
+option java_package = "org.silnith.example.grpc.tessellation";
+option java_multiple_files = true;
+
+/*
+ * A single coordinate in 3-space.
+ */
+message Vertex {
+  double x = 1;
+  double y = 2;
+  double z = 3;
+}
+
+/*
+ * A polygon with an arbitrary number of sides.
+ */
+message Polygon {
+    repeated Vertex vertex = 1;
+}
+
+/*
+ * A service that provides tessellation for 3D models.
+ */
+service TessellationService {
+    /*
+     * Tessellates a series of polygons into a series of triangles suitable for rendering.
+     */
+    rpc Tessellate(stream Polygon) returns (stream Polygon);
+}

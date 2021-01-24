@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.silnith.example.grpc</groupId>
+		<artifactId>grpc-example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>tessellation-api</artifactId>
+	<name>Tessellation gRPC API</name>
+	<description>The gRPC interface for the tessellation service.</description>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<dependencies>
+	   <dependency>
+	       <groupId>io.grpc</groupId>
+	       <artifactId>grpc-services</artifactId>
+	       <version>${grpc.version}</version>
+	   </dependency>
+	</dependencies>
+	<build>
+	   <plugins>
+	       <plugin>
+	           <groupId>org.apache.maven.plugins</groupId>
+	           <artifactId>maven-toolchains-plugin</artifactId>
+	           <configuration>
+	               <toolchains>
+	                   <jdk>
+	                       <version>[1.8,1.9)</version>
+	                   </jdk>
+	               </toolchains>
+	           </configuration>
+	       </plugin>
+	       <plugin>
+	           <groupId>org.xolstice.maven.plugins</groupId>
+	           <artifactId>protobuf-maven-plugin</artifactId>
+	       </plugin>
+	   </plugins>
+	</build>
+</project>
