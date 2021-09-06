@@ -16,6 +16,7 @@
     <modules>
     	<module>tessellation-api</module>
     	<module>renderer</module>
+    	<module>tessellation-service</module>
     </modules>
     <properties>
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
