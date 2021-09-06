@@ -20,7 +20,6 @@
 	   <dependency>
 	       <groupId>io.grpc</groupId>
 	       <artifactId>grpc-services</artifactId>
-	       <version>${grpc.version}</version>
 	   </dependency>
 	</dependencies>
 	<build>
