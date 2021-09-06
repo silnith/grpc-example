@@ -20,7 +20,6 @@
 		<dependency>
 			<groupId>org.silnith.example.grpc</groupId>
 			<artifactId>tessellation-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>
